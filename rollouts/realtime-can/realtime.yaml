@@ -119,8 +119,10 @@ spec:
   - host: real.baeke.info
     http:
       paths:
-      - path: /
+      - backend:
+          service:
+            name: realtimeapp-stable
+            port:
+              number: 80
+        path: /
         pathType: ImplementationSpecific
-        backend:
-          serviceName: realtimeapp-stable
-          servicePort: 80
