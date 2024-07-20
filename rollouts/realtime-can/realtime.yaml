@@ -120,6 +120,7 @@ spec:
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
           serviceName: realtimeapp-stable
           servicePort: 80
